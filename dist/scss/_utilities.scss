@@ -1,0 +1,123 @@
+// sass file for buttons
+
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+// Button Framework (shared for all the buttons)
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transform: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+// Button color and text
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
+
+  }
+
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
+
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+
+  }
+}
+
+// We are targetting any button, links or inputs  with a class of btn-'' would  
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+  background-color: $main-color;
+
+}
+
+// Backgrounds
+
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: set-texr-color($main-color);
+  }
+
+  &-dark {
+    background-color: $dark-color;
+    color: set-texr-color($dark-color);
+  }
+
+  &-light {
+    background-color: $light-color;
+    color: set-texr-color($light-color);
+  }
+
+  &-medium {
+    background-color: $medium-color;
+    color: set-texr-color($medium-color);
+  }
+}
+
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+
+}
+
+// Padding
+
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+
+  &-2 {
+    padding: 2rem 0;
+  }
+
+  &-3 {
+    padding: 2rem 0;
+  }
+
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
